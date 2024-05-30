@@ -1,0 +1,50 @@
+/* Başlık stilleri */
+h1 {
+    font-size: 2rem; /* 32px */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Buton stilleri */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Tablo stilleri */
+  .table-auto {
+    width: 100%;
+  }
+  
+  .table-auto th,
+  .table-auto td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .table-auto th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Link stilleri */
+  .text-blue-600 {
+    color: #007bff;
+  }
+  
+  .text-yellow-600 {
+    color: #ffc107;
+  }
+  
+  .text-red-600 {
+    color: #dc3545;
+  }
+  

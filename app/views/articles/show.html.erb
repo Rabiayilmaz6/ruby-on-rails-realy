@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Article</title>
+  <link rel="stylesheet" href="/assets/stylesheets/c.css">
+</head>
+<body>
+  <p>
+    <strong>Title:</strong>
+    <!-- Makale başlığı burada görünecek -->
+    <span id="article-title"><!-- Title will be inserted here --></span>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <!-- Makale içeriği burada görünecek -->
+    <span id="article-content"><!-- Content will be inserted here --></span>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <!-- Makale durumu burada görünecek -->
+    <span id="article-status"><!-- Status will be inserted here --></span>
+  </p>
+
+  <p>
+    <strong>Created At:</strong>
+    <!-- Makale oluşturulma zamanı burada görünecek -->
+    <span id="article-created-at"><!-- Created at time will be inserted here --></span>
+  </p>
+
+  <a href="#" id="edit-link">Edit</a> |
+  <a href="/articles" id="back-link">Back</a>
+
+  <script>
+    // Bu script blokunu kullanarak dinamik verileri yerleştirebilirsiniz
+    document.getElementById('article-title').textContent = "Sample Title";
+    document.getElementById('article-content').textContent = "Sample Content";
+    document.getElementById('article-status').textContent = "Published";
+    document.getElementById('article-created-at').textContent = "10 minutes ago";
+
+    // Edit linkini dinamik olarak ayarlayın
+    document.getElementById('edit-link').href = "/articles/1/edit";
+  </script>
+</body>
+</html>
