@@ -1,4 +1,11 @@
 <h1>Welcome to MyApp</h1>
-<% unless @articles_exist %>
+<% unless @articles_exist %> <!--koşullu kontrolu sağlamak için unless kullanılmıştır. unless if ifadesinin tersidir
+yani articles exist ifadesi false veya boş ise bu blok içindeki kodd çalıştırılır 
+makalelerin var olup olmadığını gösteri-->
+
   <%= link_to 'Go to Articles', articles_path, class: 'btn btn-primary' %>
-<% end %>
+<!--link_to kullanılarak bir bağlantı oluşturulur 
+article path: bağlantıların yönlendirileceği urldir
+-->
+
+<% end %> 
