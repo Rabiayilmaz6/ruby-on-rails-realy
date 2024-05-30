@@ -47,4 +47,10 @@ h1 {
   .text-red-600 {
     color: #dc3545;
   }
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sayfanın tamamını kaplar */
+  }
   

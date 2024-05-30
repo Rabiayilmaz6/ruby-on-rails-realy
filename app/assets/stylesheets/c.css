@@ -1,94 +1,34 @@
-/* Genel stil */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f8f8f8;
-  }
-  
-  /* Başlık stil */
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* Paragraflar ve güçlü etiketler */
-  p {
-    font-size: 1em;
-    margin: 10px 0;
-  }
-  
-  strong {
-    font-weight: bold;
-  }
-  
-  /* Linkler */
-  a {
-    text-decoration: none;
-    color: #007BFF;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  a.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
-  }
-  
-  a.btn-primary {
-    background-color: #007BFF;
-  }
-  
-  a.btn-secondary {
-    background-color: #6c757d;
-  }
-  
-  /* Form grup */
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #007BFF;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #007BFF;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #5a6268;
-  }
-  
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto;
+}
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.button-group {
+  display: flex;
+  margin-top: 10px;
+}
+.button-group a, .button-group button {
+  margin-right: 10px;
+}
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Sayfanın tamamını kaplar */
+}
+.button-group {
+  margin-top: 10px;
+}
+.button-group a, .button-group button {
+  margin-right: 10px;
+}

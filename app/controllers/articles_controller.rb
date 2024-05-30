@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
   
     def update
       if @article.update(article_params)
-        redirect_to @article, notice: 'Article was successfully updated.'
+        redirect_to articles_url, notice: 'Article was successfully updated.'
       else
         render :edit
       end
@@ -35,16 +35,16 @@ class ArticlesController < ApplicationController
   
     def destroy
       @article.destroy
-      redirect_to articles_url, notice: 'Article was successfully destroyed.'
+      redirect_to articles_url, notice: 'Article was successfully destroyed.'    
     end
-  
+
     private
-  
     def set_article
       @article = Article.find(params[:id])
     end
   
     def article_params
+
       params.require(:article).permit(:title, :content, :status)
     end
   end

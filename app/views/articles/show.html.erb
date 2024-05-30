@@ -7,42 +7,34 @@
   <link rel="stylesheet" href="/assets/stylesheets/c.css">
 </head>
 <body>
-  <p>
-    <strong>Title:</strong>
-    <!-- Makale başlığı burada görünecek -->
-    <span id="article-title"><!-- Title will be inserted here --></span>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <!-- Makale içeriği burada görünecek -->
-    <span id="article-content"><!-- Content will be inserted here --></span>
-  </p>
-
-  <p>
-    <strong>Status:</strong>
-    <!-- Makale durumu burada görünecek -->
-    <span id="article-status"><!-- Status will be inserted here --></span>
-  </p>
-
-  <p>
-    <strong>Created At:</strong>
-    <!-- Makale oluşturulma zamanı burada görünecek -->
-    <span id="article-created-at"><!-- Created at time will be inserted here --></span>
-  </p>
-
-  <a href="#" id="edit-link">Edit</a> |
-  <a href="/articles" id="back-link">Back</a>
-
-  <script>
-    // Bu script blokunu kullanarak dinamik verileri yerleştirebilirsiniz
-    document.getElementById('article-title').textContent = "Sample Title";
-    document.getElementById('article-content').textContent = "Sample Content";
-    document.getElementById('article-status').textContent = "Published";
-    document.getElementById('article-created-at').textContent = "10 minutes ago";
-
-    // Edit linkini dinamik olarak ayarlayın
-    document.getElementById('edit-link').href = "/articles/1/edit";
-  </script>
+  <div class="centered-content">
+    <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td><strong>Title:</strong></td>
+      <td><%= @article.title %></td>
+    </tr>
+    <tr>
+      <td><strong>Content:</strong></td>
+      <td><%= @article.content %></td>
+    </tr>
+    <tr>
+      <td><strong>Status:</strong></td>
+      <td><%= @article.status %></td>
+    </tr>
+    <tr>
+      <td><strong>Created At:</strong></td>
+      <td><%= time_ago_in_words(@article.created_at) %> ago</td>
+    </tr>
+  </table>
+  <div class="button-group">
+  <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-outline-danger', style: 'float: left; margin-right: 10px;' %>
+  <%= link_to 'Back', articles_path, class: 'btn btn-danger', style: 'float: left;' %>
+  <div style="clear: both;"></div>
+  </div>
+  </div>
 </body>
 </html>
