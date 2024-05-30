@@ -1,0 +1,4 @@
+<h1>Welcome to MyApp</h1>
+<% unless @articles_exist %>
+  <%= link_to 'Go to Articles', articles_path, class: 'btn btn-primary' %>
+<% end %>

@@ -1,33 +1,39 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!--  -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= action_name.capitalize %> Article</title>
+
+  <title><%= action_name.capitalize %> Article</title><!-- başlık kısmı -->
+
   <!-- CSS dosyasını ekleyin -->
   <link rel="stylesheet" href="assets/stylesheets/b.css">
   
   <!-- CSRF koruma için meta etiketini ekleyin -->
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %> <!-- bunu yazmadığımda hata aldım -->
 </head>
 <body>
+
   <h1 class="text-3xl font-bold">
-    <% if action_name == 'new' %>
-      New Article
-    <% else %>
+    <% if action_name == 'new' %> <!-- yeni bir article oluşturulacaksa alttaki baslık gössteriler  -->
+      New Article 
+    <% else %><!-- mevcut makale düzenlenecekse   -->
       Edit Article
     <% end %>
   </h1>
-<form action="/articles" method="post">
+
+<form action="/articles" method="post"> 
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
       <div class="form-group">
       <label for="article_title">Title</label>
       <input type="text" id="article_title" name="article[title]" class="form-control" value="<%= @article.title if action_name == 'edit' %>" />
     </div>
+
     <div class="form-group">
       <label for="article_content">Content</label>
       <textarea id="article_content" name="article[content]" class="form-control"><%= @article.content if action_name == 'edit' %></textarea>
     </div>
+
     <div class="form-group">
       <label for="article_status">Status</label>
       <select id="article_status" name="article[status]" class="form-control">
@@ -35,6 +41,7 @@
           <option value="<%= status %>" <%= 'selected' if @article.status == status && action_name == 'edit' %>><%= status.humanize %></option>
         <% end %>
       </select>
+
     </div>
     <div class="form-group">
       <input type="submit" value="Save" class="btn btn-primary" />

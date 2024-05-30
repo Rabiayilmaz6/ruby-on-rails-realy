@@ -21,14 +21,14 @@
       </tr>
     </thead>
     <tbody>
-      <% @articles.each do |article| %>
+      <% @articles.each do |i| %> <!--her bir article için aşağıdaki adımlar gerçekleşir-->
         <tr>
-          <td><%= article.title %></td>
-          <td><%= article.status %></td>
+          <td><%= i.title %></td> <!--title özelliğini ekranda gösterir-->
+          <td><%= i.status %></td>
           <td style="display: flex; justify-content: flex-start;">
-            <%= link_to 'Show', article_path(article), class: 'text-blue-600', class: 'btn btn-outline-danger'%>
-            <%= link_to 'Edit', edit_article_path(article), class: 'text-yellow-600', class: 'btn btn-outline-danger'%>
-            <%= button_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger btn-delete' %>
+            <%= link_to 'Show', article_path(i), class: 'text-blue-600', class: 'btn btn-outline-danger'%> <!--article nesnesini showda göstermek-->
+            <%= link_to 'Edit', edit_article_path(i), class: 'text-blue-600 btn btn-outline-danger'%> 
+            <%= button_to 'Delete', i, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger btn-delete' %>
           </td>
         </tr>
       <% end %>
